@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MNSAProject</string>
+    <string name="error_location">Something went wrong, and we couldn\'t find your location.  Try again in a little bit.</string>
+    <string name="permission_denied_location">You\'ve chosen not to use location services.  We can't display your location.</string>
 </resources>
