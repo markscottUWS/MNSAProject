@@ -9,6 +9,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -17,7 +20,15 @@ import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.security.Permission;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    //Widget references
+    //The button the user will click on to get their location
+    private Button locationButton;
+    //The textview to show the longitude
+    private TextView longitudeTextView;
+    //The textview to show the latitude
+    private TextView latitudeTextView;
 
     //This is the private variable to reference the location provider
     private FusedLocationProviderClient mFusedLocationClient;
@@ -35,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //this call retrieves the location provider
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        //TODO: Assign longitudeTextView from xml id
+        //TODO: Assign latitudeTextView from xml id
+        //TODO: Assign locationButton from xml id
+        locationButton.setOnClickListener(this);
     }
 
     /**
@@ -149,5 +164,10 @@ public class MainActivity extends AppCompatActivity {
             mCurrentLocation = null;
             //TODO: Set longitude and latitude text views to empty strings
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        findLocation();
     }
 }
