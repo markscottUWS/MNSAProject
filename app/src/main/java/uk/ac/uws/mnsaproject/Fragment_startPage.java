@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Fragement_startPage extends Fragment {
+public class Fragment_startPage extends Fragment {
 
     private TextView mTv1, mTv2;
     private Button mButton;
