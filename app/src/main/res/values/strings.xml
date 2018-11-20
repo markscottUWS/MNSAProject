@@ -5,4 +5,5 @@
     <string name="welcome_sub">Future you will thank you.</string>
     <string name="get_started">Let\'s get started!</string>
     <string name="in_week">You\'re in week %1$d</string>
+    <string name="title_activity_plan">PlanActivity</string>
 </resources>
