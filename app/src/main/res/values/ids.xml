@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="adata" type="id" />
+    <item name="bdata" type="id" />
+    <item name="cdata" type="id" />
+    <item name="generate" type="id" />
+    <item name="pie" type="id" />
+</resources>
