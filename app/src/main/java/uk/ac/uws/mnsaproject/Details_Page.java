@@ -112,7 +112,13 @@ public class Details_page {
                 Toast.makeText(this,getResources().getString(R.string.here_is_values,("\nname:"+name+"\nheight:"+height+"\nEmail:"+weight+"\nage:"+age+"\nGender:"+gender)),Toast.LENGTH_SHORT).show();
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putString(SharedPrefsKeys.nameKey, name);
-
+                editor.putString(SharedPrefsKeys.heightKey, height);
+                editor.putString(SharedPrefsKeys.weightKey, weight);
+                editor.putString(SharedPrefsKeys.idealWeightKey, ideal);
+                editor.putString(SharedPrefsKeys.genderKey, gender);
+                editor.putString(SharedPrefsKeys.expectationKey, expect);
+                editor.putString(SharedPrefsKeys.ageKey, age);
+                
                 editor.commit();
 
             }
