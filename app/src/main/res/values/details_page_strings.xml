@@ -18,7 +18,6 @@
     <string name="register_form_text">Welcome! please give your details.</string>
     <string name="tellus">Please tell us your goals.</string>
     <string name="no_field_can_be_empty">No field can be empty</string>
-    <string name="passwords_must_be_the_same">Password and password again field must be the same</string>
     <string name="here_is_values">Here is your plan: %1$s</string>
     <string name="activity_level">Your activity level</string>
     <string-array name="lifestyle">
