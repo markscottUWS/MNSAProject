@@ -2,6 +2,8 @@ package uk.ac.uws.mnsaproject;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -85,6 +87,8 @@ public class Details_page {
 
         private void showToastWithFormValues() {
 
+            SharedPreferences prefs = getSharedPreferences(SharedPrefsKeys.prefsId, Context.MODE_PRIVATE);
+
             //Get edittexts values
             String name=nameEdittext.getText().toString();
             String height=heightEdittext.getText().toString();
@@ -106,6 +110,10 @@ public class Details_page {
 
                 //Everything allright
                 Toast.makeText(this,getResources().getString(R.string.here_is_values,("\nname:"+name+"\nheight:"+height+"\nEmail:"+weight+"\nage:"+age+"\nGender:"+gender)),Toast.LENGTH_SHORT).show();
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString(SharedPrefsKeys.nameKey, name);
+
+                editor.commit();
 
             }
             else{
