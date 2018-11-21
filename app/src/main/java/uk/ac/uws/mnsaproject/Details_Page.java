@@ -109,7 +109,8 @@ public class Details_page {
 
 
                 //Everything allright
-                Toast.makeText(this,getResources().getString(R.string.here_is_values,("\nname:"+name+"\nheight:"+height+"\nEmail:"+weight+"\nage:"+age+"\nGender:"+gender)),Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,getResources().getString(R.string.here_is_values,("\nname:"+name+"\nheight:"+height+"\nWeight:"+weight+"\nage:"+age+"\nGender:"+gender)),Toast.LENGTH_SHORT).show();
+
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putString(SharedPrefsKeys.nameKey, name);
                 editor.putString(SharedPrefsKeys.heightKey, height);
@@ -118,7 +119,7 @@ public class Details_page {
                 editor.putString(SharedPrefsKeys.genderKey, gender);
                 editor.putString(SharedPrefsKeys.expectationKey, expect);
                 editor.putString(SharedPrefsKeys.ageKey, age);
-                
+
                 editor.commit();
 
             }
