@@ -6,4 +6,11 @@
     <string name="get_started">Let\'s get started!</string>
     <string name="in_week">You\'re in week %1$d</string>
     <string name="title_activity_plan">PlanActivity</string>
+    <string name="bmi">BMI</string>
+    <string name="target_calories">Target Calories</string>
+    <string name="recommended_exercises">Recommended Activities</string>
+    <string name="percent_carbs">%1$d%% carbs</string>
+    <string name="percent_fats">%1$d%% fats</string>
+    <string name="percent_protein">%1$d%% protein</string>
+    <string name="number_target_calories">%1$d kcal</string>
 </resources>
