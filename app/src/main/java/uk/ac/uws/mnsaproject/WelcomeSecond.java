@@ -1,12 +1,14 @@
 package uk.ac.uws.mnsaproject;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -26,6 +28,9 @@ public class WelcomeSecond extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private String userName;
+    private TextView welcomeTextView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -57,6 +62,15 @@ public class WelcomeSecond extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+
+        welcomeTextView = getView().findViewById(R.id.welcome_back_textview);
+
+        SharedPreferences prefs = getActivity().getSharedPreferences(SharedPrefsKeys.prefsId, Context.MODE_PRIVATE);
+        userName = prefs.getString(SharedPrefsKeys.nameKey, "");
+        if(userName != "")
+        {
+            welcomeTextView.setText(getString(R.string.welcome_name, userName));
         }
     }
 
