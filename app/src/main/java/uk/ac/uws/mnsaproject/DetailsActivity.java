@@ -16,9 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import java.util.Calendar;
-
 
 public class DetailsActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
@@ -34,7 +32,6 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_page_activity_main);
-
 
         //Bind views with their ids
         bindViews();
@@ -63,11 +60,13 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         expectRadioGroup=(RadioGroup)findViewById(R.id.expect_radiogroup);
         registerButton=(Button)findViewById(R.id.register_button);
         spinner=(Spinner)findViewById(R.id.spinner);
+
     }
 
     private void setViewActions() {
         ageEdittext.setOnClickListener(this);
         registerButton.setOnClickListener(this);
+
     }
 
     private void prepareDatePickerDialog() {
@@ -87,6 +86,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                 datePickerDialog.dismiss();
             }
         },calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
+
     }
 
     private void showToastWithFormValues() {
@@ -111,9 +111,8 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         //Check all fields
         if(!name.equals("")&&!height.equals("")&&!weight.equals("")&&!ideal.equals("")&&!age.equals("")&&!gender.equals("")){
 
-
             //Everything allright
-            Toast.makeText(this,getResources().getString(R.string.here_is_values,("\nname:"+name+"\nheight:"+height+"\nEmail:"+weight+"\nage:"+age+"\nGender:"+gender)),Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getResources().getString(R.string.here_is_values,("\nname:"+name+"\nheight:"+height+"\nweight:"+weight+"\nage:"+age+"\nGender:"+gender)),Toast.LENGTH_SHORT).show();
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString(SharedPrefsKeys.nameKey, name);
             editor.putString(SharedPrefsKeys.heightKey, height);
@@ -158,6 +157,5 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-
     }
 }

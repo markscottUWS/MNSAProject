@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -14,10 +15,11 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:background="#800000"
+            android:background="#d8b2d8"
             android:gravity="center"
             android:text="@string/register_form_text"
-            android:textColor="#FFFFFF" />
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/name_edittext"
@@ -58,27 +60,31 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="@string/gender" />
+                android:text="@string/gender"
+                android:textColor="#800080"
+                android:textSize="18sp" />
 
             <RadioGroup
                 android:id="@+id/gender_radiogroup"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/male"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/male" />
+                    android:text="@string/male"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/female" />
+                    android:text="@string/female"
+                    android:textSize="18sp" />
 
             </RadioGroup>
 
@@ -88,10 +94,11 @@
             android:id="@+id/textview2"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:background="#800000"
+            android:background="#d8b2d8"
             android:gravity="center"
             android:text="@string/tellus"
-            android:textColor="#FFFFFF" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/ideal_edittext"
@@ -112,7 +119,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:hint="lose or maintain"
-                android:text="lose or Maintain" />
+                android:text="lose or Maintain"
+                android:textColor="#800080"
+                android:textSize="18sp" />
 
             <RadioGroup
                 android:id="@+id/expect_radiogroup"
@@ -125,13 +134,15 @@
                     android:id="@+id/lose"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lose" />
+                    android:text="@string/lose"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/Maintain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/maintain" />
+                    android:text="@string/maintain"
+                    android:textSize="18sp" />
 
             </RadioGroup>
         </LinearLayout>
@@ -145,12 +156,15 @@
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Activity level" />
+                android:text="Activity level"
+                android:textColor="#800080"
+                android:textStyle="bold"
+                android:textSize="18sp" />
 
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
-                android:layout_height="38dp"
+                android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp" />
         </LinearLayout>
@@ -160,10 +174,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:background="#800080"
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/register" />
+            android:text="Click here to check plan"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
