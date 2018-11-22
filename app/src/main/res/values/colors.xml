@@ -6,8 +6,8 @@
     <color name="red">#D50000</color>
     <color name="blue">#304FFE</color>
     <color name="yellow">#FFD600</color>
-    <color name="colorPrimary">#ff5722</color>
-    <color name="colorPrimaryDark">#9e9e9e</color>
-    <color name="colorAccent">#607d8b</color>
+    <color name="colorPrimary">#800080</color>
+    <color name="colorPrimaryDark">#b266b2</color>
+    <color name="colorAccent">#d8b2d8</color>
     <color name="colorButton">#ff5722</color>
 </resources>
