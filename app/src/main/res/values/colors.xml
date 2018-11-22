@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="mainScale">#616161</color>
-    <color name="healthyScale">#33691E</color>
-    <color name="marker">#FDD835</color>
-    <color name="red">#D50000</color>
-    <color name="blue">#304FFE</color>
-    <color name="yellow">#FFD600</color>
+    <color name="mainScale">#b266b2</color>
+    <color name="healthyScale">#d8b2d8</color>
+    <color name="marker">#d8b2d8</color>
+    <color name="red">#4c004c</color>
+    <color name="blue">#660066</color>
+    <color name="yellow">#d8b2d8</color>
     <color name="colorPrimary">#800080</color>
     <color name="colorPrimaryDark">#b266b2</color>
-    <color name="colorAccent">#d8b2d8</color>
-    <color name="colorButton">#ff5722</color>
+    <color name="colorAccent">#b266b2</color>
+    <color name="colorButton">#b266b2</color>
 </resources>
