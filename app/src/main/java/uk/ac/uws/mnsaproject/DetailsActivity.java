@@ -28,6 +28,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
     private DatePickerDialog datePickerDialog;
     private Spinner spinner;
 
+    private long birthDateMillis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,9 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                 //When a date is selected, it comes here.
                 //Change ageEdittext's text and dismiss dialog.
                 ageEdittext.setText(dayOfMonth+"/"+monthOfYear+"/"+year);
+                Calendar birthCalendar = Calendar.getInstance();
+                birthCalendar.set(year, monthOfYear, dayOfMonth);
+                birthDateMillis = birthCalendar.getTimeInMillis();
                 datePickerDialog.dismiss();
             }
         },calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
@@ -118,6 +122,9 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
             editor.putString(SharedPrefsKeys.genderKey, gender);
             editor.putString(SharedPrefsKeys.expectationKey, expect);
             editor.putBoolean(SharedPrefsKeys.existingUserKey, true);
+            editor.putLong(SharedPrefsKeys.birthDateMillisKey, birthDateMillis);
+            Calendar now = Calendar.getInstance();
+            editor.putLong(SharedPrefsKeys.joinDateMillisKey, now.getTimeInMillis());
             editor.commit();
 
             Intent planintent = new Intent(getApplicationContext(), PlanActivity.class);

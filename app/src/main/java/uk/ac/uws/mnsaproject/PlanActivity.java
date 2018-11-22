@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 public class PlanActivity extends AppCompatActivity
@@ -201,42 +202,16 @@ public class PlanActivity extends AppCompatActivity
         int month = 0;
         int year = 0;
         boolean validValues = true;
-        String dayString = prefs.getString(SharedPrefsKeys.dayOfBirthKey, "");
-        if (!dayString.equals(""))
-        {
-            try
-            {
-                day = Integer.parseInt(dayString);
-            }
-            catch (NumberFormatException e)
-            {
-                validValues = false;
-            }
+
+        long birthDateInMillis = prefs.getLong(SharedPrefsKeys.birthDateMillisKey, 0);
+        if (birthDateInMillis > 0) {
+            Calendar calendar = new GregorianCalendar();
+            calendar.setTimeInMillis(birthDateInMillis);
+            day = calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH);
+            month = calendar.get(Calendar.MONTH);
+            year = calendar.get(Calendar.YEAR);
         }
-        String monthString = prefs.getString(SharedPrefsKeys.monthOfBirthKey, "");
-        if(!monthString.equals(""))
-        {
-            try
-            {
-                month = Integer.parseInt(monthString);
-            }
-            catch (NumberFormatException nfe)
-            {
-                validValues = false;
-            }
-        }
-        String yearString = prefs.getString(SharedPrefsKeys.yearOfBirthKey, "");
-        if(!yearString.equals(""))
-        {
-            try
-            {
-                year = Integer.parseInt(yearString);
-            }
-            catch (NumberFormatException nfe)
-            {
-                validValues = false;
-            }
-        }
+
         if(validValues)
         {
             Calendar now = Calendar.getInstance();
