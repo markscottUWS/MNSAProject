@@ -2,6 +2,7 @@ package uk.ac.uws.mnsaproject;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -116,8 +117,11 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
             editor.putString(SharedPrefsKeys.idealWeightKey, ideal);
             editor.putString(SharedPrefsKeys.genderKey, gender);
             editor.putString(SharedPrefsKeys.expectationKey, expect);
-
+            editor.putBoolean(SharedPrefsKeys.existingUserKey, true);
             editor.commit();
+
+            Intent planintent = new Intent(getApplicationContext(), PlanActivity.class);
+            startActivity(planintent);
 
         }
         else{

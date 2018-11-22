@@ -13,4 +13,5 @@ public class SharedPrefsKeys
     public static final String yearOfBirthKey = "year_of_birth_key";
     public static final String activityKey = "activity_key";
     public static final String prefsId = "uk.ac.uws.MNSAProject.SharedPrefs";
+    public static final String existingUserKey = "existing_user";
 }
