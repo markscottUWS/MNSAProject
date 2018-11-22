@@ -125,6 +125,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
             editor.putLong(SharedPrefsKeys.birthDateMillisKey, birthDateMillis);
             Calendar now = Calendar.getInstance();
             editor.putLong(SharedPrefsKeys.joinDateMillisKey, now.getTimeInMillis());
+            editor.putString(SharedPrefsKeys.activityKey, spinner.getSelectedItem().toString());
             editor.commit();
 
             Intent planintent = new Intent(getApplicationContext(), PlanActivity.class);

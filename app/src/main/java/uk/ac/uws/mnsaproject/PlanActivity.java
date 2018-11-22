@@ -57,7 +57,7 @@ public class PlanActivity extends AppCompatActivity
         exercise1ImageView = findViewById(R.id.activity_image_1);
         exercise2ImageView = findViewById(R.id.activity_image_2);
         exercise3ImageView = findViewById(R.id.activity_image_3);
-
+        exerciseArray = new int[3];
         retrieveSharedPrefs();
 
         if(!invalid)
@@ -73,6 +73,8 @@ public class PlanActivity extends AppCompatActivity
             int fats = macros.get(PlanCalculator.FATS);
             int protein = macros.get(PlanCalculator.PROTEIN);
             caloriePieDrawable = new PieDrawable(carbs, fats, protein, getApplicationContext());
+            pieImageView.setImageDrawable(caloriePieDrawable);
+
             percentCarbsTextView.setText(getString(R.string.percent_carbs, carbs));
             percentFatsTextView.setText(getString(R.string.percent_fats, fats));
             percentProteinTextView.setText(getString(R.string.percent_protein, protein));
