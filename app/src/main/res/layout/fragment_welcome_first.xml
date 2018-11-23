@@ -7,6 +7,7 @@
     android:padding="@dimen/margin_standard"
     tools:context=".WelcomeFirst">
 
+
     <TextView
         android:id="@+id/main_welcome_textview"
         style="@style/TextAppearance.AppCompat.Headline"
@@ -14,7 +15,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/welcome"
-        android:textSize="35sp"
+        android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="It always seems impossible until it's done"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -34,11 +35,12 @@
 
     <Button
         android:id="@+id/get_started_button"
-        android:layout_width="178dp"
-        android:layout_height="64dp"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
         android:background="@color/colorButton"
         android:text="@string/get_started"
-        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -54,7 +56,7 @@
         android:layout_marginStart="199dp"
         android:layout_marginTop="13dp"
         android:text="Nelson Mandela"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/get_started_button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,61 +64,65 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sub_welcome_textview"
         app:layout_constraintVertical_bias="0.018" />
-    
-     <EditText
+
+    <EditText
         android:id="@+id/editText1"
-        android:layout_width="219dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="217dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="209dp"
+        android:layout_width="220dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="39dp"
+        android:layout_marginEnd="68dp"
         android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/get_started_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="128dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="192dp"
+        android:layout_width="199dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
         android:text="Enter new password"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="117dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="176dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
         android:text="Enter password again"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText1" />
 
