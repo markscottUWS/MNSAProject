@@ -1,17 +1,14 @@
 package uk.ac.uws.mnsaproject;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.PixelFormat;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Window;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
-import android.widget.TextView;
+
 
 public class SplashActivity extends AppCompatActivity {
+    private String password;
 
 
     @Override
@@ -19,12 +16,24 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        SharedPreferences settings = getSharedPreferences("PREFS",0);
+        password = settings.getString("password","");
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
+                if (password.equals("")) {
+                    Intent intent = new Intent(getApplicationContext(), WelcomeFirst.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Intent intent = new Intent(getApplicationContext(), WelcomeSecond.class);
+                    startActivity(intent);
+                    finish();
+
+
+                }
             }
         }, 2000);
     }
