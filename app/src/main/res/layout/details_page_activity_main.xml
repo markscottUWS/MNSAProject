@@ -14,19 +14,20 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="44dp"
             android:background="#d8b2d8"
             android:gravity="center"
-            android:text="@string/register_form_text"
+            android:text="Give your details"
             android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/name_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="@string/name" />
+            android:hint="@string/name"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/height_edittext"
@@ -34,7 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="@string/height"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/weight_edittext"
@@ -42,7 +44,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="@string/weight"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/age_edittext"
@@ -50,7 +53,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:focusable="false"
-            android:hint="@string/age" />
+            android:hint="@string/age"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/gender"
                 android:textColor="#800080"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <RadioGroup
                 android:id="@+id/gender_radiogroup"
@@ -77,14 +81,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/male"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <RadioButton
                     android:id="@+id/female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/female"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
             </RadioGroup>
 
@@ -93,12 +97,12 @@
         <TextView
             android:id="@+id/textview2"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="42dp"
             android:background="#d8b2d8"
             android:gravity="center"
-            android:text="@string/tellus"
+            android:text="Tell  your goals"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/ideal_edittext"
@@ -106,7 +110,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="@string/ideal"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,14 +140,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/lose"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <RadioButton
                     android:id="@+id/Maintain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/maintain"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
             </RadioGroup>
         </LinearLayout>
@@ -158,8 +163,8 @@
                 android:layout_height="wrap_content"
                 android:text="Activity level"
                 android:textColor="#800080"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/spinner"
@@ -176,12 +181,12 @@
             android:layout_marginTop="20dp"
             android:background="#800080"
             android:gravity="center"
-            android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Click here to check plan"
+            android:paddingTop="10dp"
+            android:text="Check my plan"
             android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:textSize="18sp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
