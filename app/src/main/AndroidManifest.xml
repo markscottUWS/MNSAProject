@@ -9,18 +9,15 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+        <activity android:name=".DetailsActivity">
+        </activity>
+        <activity android:name=".PlanActivity">
 
         </activity>
 
-        <activity android:name=".SplashActivity" >
+        <activity android:name=".WelcomeSecond" />
+        <activity android:name=".WelcomeFirst" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,11 +25,6 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".DetailsActivity">
-
-        </activity>
-        <activity
-            android:name=".PlanActivity"></activity>
     </application>
 
 </manifest>
