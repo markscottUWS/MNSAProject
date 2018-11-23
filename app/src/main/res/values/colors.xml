@@ -9,5 +9,6 @@
     <color name="colorPrimary">#800080</color>
     <color name="colorPrimaryDark">#b266b2</color>
     <color name="colorAccent">#b266b2</color>
-    <color name="colorButton">#b266b2</color>
+    <color name="colorButton">#800080</color>
 </resources>
+
