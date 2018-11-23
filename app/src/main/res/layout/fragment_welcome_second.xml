@@ -6,6 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".WelcomeSecond">
 
+
+    <TextView
+        android:id="@+id/welcome_back_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/welcome_name"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:padding="@dimen/margin_standard"/>
+
+    <TextView
+        android:id="@+id/week_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/welcome_back_textview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:text="@string/in_week"
+        style="@style/TextAppearance.AppCompat.Subhead"/>
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
@@ -16,6 +38,7 @@
         android:layout_marginTop="43dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,12 +46,15 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="185dp"
-        android:layout_height="54dp"
+        android:layout_width="325dp"
+        android:layout_height="42dp"
         android:layout_marginBottom="149dp"
         android:layout_marginEnd="91dp"
         android:layout_marginStart="108dp"
+        android:background="@color/colorButton"
         android:text="ENTER"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
