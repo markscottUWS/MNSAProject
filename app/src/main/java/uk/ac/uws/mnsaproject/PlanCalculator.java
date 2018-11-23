@@ -89,6 +89,8 @@ public class PlanCalculator
         return result;
     }
 
+
+
     /**
      * Method calculates macronutrient ratios according
      * to the parameters held in the PlanCalculator,
