@@ -106,7 +106,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
         //Get expectations
         RadioButton expectationsRadioButton=(RadioButton)findViewById(expectRadioGroup.getCheckedRadioButtonId());
-        String expect=expectationsRadioButton==null ? "":selectedRadioButton.getText().toString();
+        String expect=expectationsRadioButton==null ? "":expectationsRadioButton.getText().toString();
 
         //Check all fields
         if(!name.equals("")&&!height.equals("")&&!weight.equals("")&&!ideal.equals("")&&!age.equals("")&&!gender.equals("")){

@@ -28,6 +28,27 @@
         android:text="@string/in_week"
         style="@style/TextAppearance.AppCompat.Subhead"/>
 
+    <ImageView
+        android:id="@+id/water_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/week_textview"
+        app:layout_constraintBottom_toTopOf="@id/textView"
+        android:padding="@dimen/margin_standard"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_password"
+        android:textSize="@dimen/font_size_standard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/water_imageview"
+        app:layout_constraintBottom_toTopOf="@id/editText"/>
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
@@ -38,7 +59,7 @@
         android:layout_marginTop="43dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:textSize="16sp"
+        android:textSize="@dimen/font_size_standard"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,29 +67,53 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="325dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="149dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginStart="108dp"
-        android:background="@color/colorButton"
-        android:text="ENTER"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="143dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="171dp"
-        android:text="Enter password"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/colorButton"
+        android:text="@string/enter"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_standard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nav_layout"
+        app:layout_constraintTop_toBottomOf="@id/editText"/>
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="@dimen/margin_standard"
+        android:background="@color/colorPrimary">
+        <ImageButton
+            android:id="@+id/plan_button"
+            android:layout_width="@dimen/round_button_width"
+            android:layout_height="@dimen/round_button_width"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/details_button"
+            android:background="@drawable/button_round_blue"
+            android:src="@drawable/pie"
+            android:scaleType="centerInside"/>
+        <ImageButton
+            android:id="@+id/details_button"
+            android:layout_width="@dimen/round_button_width"
+            android:layout_height="@dimen/round_button_width"
+            app:layout_constraintLeft_toRightOf="@id/plan_button"
+            app:layout_constraintRight_toLeftOf="@id/water_button"
+            android:background="@drawable/button_round_blue"
+            android:src="@drawable/form"
+            android:scaleType="centerInside"/>
+        <ImageButton
+            android:id="@+id/water_button"
+            android:layout_width="@dimen/round_button_width"
+            android:layout_height="@dimen/round_button_width"
+            app:layout_constraintLeft_toRightOf="@id/details_button"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/button_round_blue"
+            android:src="@drawable/water"
+            android:scaleType="centerInside"/>
+    </android.support.constraint.ConstraintLayout>
+
 </android.support.constraint.ConstraintLayout>

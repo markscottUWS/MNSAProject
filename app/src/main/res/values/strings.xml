@@ -13,4 +13,12 @@
     <string name="percent_fats">%1$d%% fats</string>
     <string name="percent_protein">%1$d%% protein</string>
     <string name="number_target_calories">%1$d kcal</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter">Enter</string>
+    <string name="water_target">Target: %1$.1fl</string>
+    <string name="drank">I drank: </string>
+    <string name="water_units">ml</string>
+    <string name="add_water">Add it!</string>
+    <string name="water_so_far">You\'ve drunk %1$.1fl of %2$.1fl.</string>
+    <string name="no_water_value">Please enter a value for the amount of water you\'ve drunk.</string>
 </resources>

@@ -209,7 +209,7 @@ public class PlanActivity extends AppCompatActivity
         if (birthDateInMillis > 0) {
             Calendar calendar = new GregorianCalendar();
             calendar.setTimeInMillis(birthDateInMillis);
-            day = calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH);
+            day = calendar.get(Calendar.DAY_OF_MONTH);
             month = calendar.get(Calendar.MONTH);
             year = calendar.get(Calendar.YEAR);
         }
@@ -218,7 +218,7 @@ public class PlanActivity extends AppCompatActivity
         {
             Calendar now = Calendar.getInstance();
             Calendar birth = Calendar.getInstance();
-            birth.set(year - 1900, month, day);
+            birth.set(year, month, day);
 
             int nowYear = now.get(Calendar.YEAR);
             int birthYear = birth.get(Calendar.YEAR);
