@@ -125,6 +125,8 @@ public class WelcomeSecond extends AppCompatActivity implements View.OnClickList
             }
             case R.id.water_button:
             {
+                Intent waterIntent = new Intent(getApplicationContext(), WaterActivity.class);
+                startActivity(waterIntent);
                 break;
             }
             case R.id.details_button:
