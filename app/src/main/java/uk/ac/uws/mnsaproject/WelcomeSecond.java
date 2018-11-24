@@ -13,6 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,12 +31,15 @@ public class WelcomeSecond extends AppCompatActivity implements View.OnClickList
     private ImageButton planButton;
     private ImageButton detailsButtons;
     private ConstraintLayout navLayout;
+    private ImageView waterImageView;
 
     String password;
 
     private String name;
     private int weeksJoined;
     private boolean validValues;
+    private double water;
+    private double targetWater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +58,11 @@ public class WelcomeSecond extends AppCompatActivity implements View.OnClickList
         detailsButtons = findViewById(R.id.details_button);
         planButton = findViewById(R.id.plan_button);
         navLayout = findViewById(R.id.nav_layout);
+        waterImageView = findViewById(R.id.water_imageview);
 
         navLayout.setVisibility(View.INVISIBLE);
+        waterImageView.setVisibility(View.INVISIBLE);
+        weekTextView.setVisibility(View.INVISIBLE);
 
         button.setOnClickListener(this);
         waterButton.setOnClickListener(this);
@@ -89,6 +96,67 @@ public class WelcomeSecond extends AppCompatActivity implements View.OnClickList
         {
             validValues = false;
         }
+
+        //get the user's ideal weight to work out their water balance
+        String idealWeightString = prefs.getString(SharedPrefsKeys.idealWeightKey, "");
+        if(!idealWeightString.equals(""))
+        {
+            double idealWeight = 0;
+            try
+            {
+                idealWeight = Double.parseDouble(idealWeightString);
+                targetWater = idealWeight * 0.03;
+            }
+            catch (NumberFormatException e)
+            {
+                targetWater = 2;
+            }
+
+        }
+
+        //get the amount of water they've added today
+        long waterDateInMillis = prefs.getLong(SharedPrefsKeys.waterDateKey, 0);
+        if(waterDateInMillis > 0)
+        {
+            Calendar now = Calendar.getInstance();
+            Calendar then = Calendar.getInstance();
+            then.setTimeInMillis(waterDateInMillis);
+            if(now.get(Calendar.YEAR) != then.get(Calendar.YEAR) &&
+                    now.get(Calendar.DAY_OF_YEAR) != then.get(Calendar.DAY_OF_YEAR))
+            {
+                //it's a different day, so we start again
+                water = 0;
+            }
+            else
+            {
+                //we retrieve the water from shared prefs
+                water = prefs.getFloat(SharedPrefsKeys.waterAmountKey, 0);
+            }
+        }
+        else
+        {
+            water = 0;
+        }
+
+        double percent = water / targetWater;
+        if(percent >= 0 && percent < 0.25)
+        {
+            waterImageView.setImageResource(R.drawable.water_none);
+        }
+        if(percent >= 0.25 && percent < 0.75)
+        {
+            waterImageView.setImageResource(R.drawable.water_one_quarter);
+        }
+        if(percent >= 0.75 && percent < 1.0)
+        {
+            waterImageView.setImageResource(R.drawable.water_three_quarters);
+        }
+        if(percent >= 1.0)
+        {
+            waterImageView.setImageResource(R.drawable.water_full);
+        }
+
+
     }
 
     private void calculateWeeks(long joinTimeInMillis)
@@ -116,6 +184,8 @@ public class WelcomeSecond extends AppCompatActivity implements View.OnClickList
                     textView.setVisibility(View.GONE);
                     button.setVisibility(View.GONE);
                     editText.setVisibility(View.GONE);
+                    waterImageView.setVisibility(View.VISIBLE);
+                    weekTextView.setVisibility(View.VISIBLE);
                 }
                 else
                 {
