@@ -13,4 +13,6 @@
     <string name="percent_fats">%1$d%% fats</string>
     <string name="percent_protein">%1$d%% protein</string>
     <string name="number_target_calories">%1$d kcal</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter">Enter</string>
 </resources>
