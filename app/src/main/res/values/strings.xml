@@ -21,4 +21,6 @@
     <string name="add_water">Add it!</string>
     <string name="water_so_far">You\'ve drunk %1$.1fl of %2$.1fl.</string>
     <string name="no_water_value">Please enter a value for the amount of water you\'ve drunk.</string>
+    <string name="water_balance_day">Your water balance resets each day.</string>
+    <string name="water_balance_motivate">Hit your target to help reach your goals!</string>
 </resources>
