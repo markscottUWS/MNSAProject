@@ -137,7 +137,7 @@ public class WaterActivity extends AppCompatActivity implements View.OnClickList
             try
             {
                 amount = Integer.parseInt(addEditText.getText().toString());
-                water = water + (amount * 0.01);
+                water = water + (amount * 0.001);
                 updateWater();
                 playSound();
                 saveWater();
